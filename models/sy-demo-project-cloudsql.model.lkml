@@ -3,8 +3,8 @@ connection: "sy-cloudsql-demos"
 include: "/views/cloudsql/*.view"                # include all views in the views/ folder in this project
 
 datagroup: sy_demo_cloudsql_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "24 hour"
+  # sql_trigger: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP());;
+  max_cache_age: "1 hour"
 }
 
 persist_with: sy_demo_cloudsql_default_datagroup
