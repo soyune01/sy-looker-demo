@@ -53,8 +53,8 @@ view: seoul_population {
             sum( foreigner_more_99 ) as foreigner_more_99
           FROM `stf-development.looker_demo.seoul_population`
           WHERE year = '2018'
-          group by  year, substr(sido, 0, 2), gungu, substr(dongmyeon, 0, 2)
-           ;;
+          group by  year, substr(sido, 0, 2), gungu, substr(dongmyeon, 0, 2) ;;
+          sql_trigger_value:  SELECT CURDATE() ;;
   }
 
   dimension: dongmyeon {
