@@ -63,6 +63,11 @@ view: call_delivery {
   dimension: industry_item {
     type: string
     sql: ${TABLE}.industry_item ;;
+    link: {
+      label: "Google"
+      url: "http://www.google.com/search?q={{ value }}"
+      icon_url: "http://google.com/favicon.ico"
+    }
   }
 
   dimension: time_tier {
