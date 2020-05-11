@@ -7,6 +7,8 @@ view: call_delivery_pdt1 {
              , sum(call_cnt) as call_cnt
         FROM `stf-development.looker_demo.call_delivery`
         group by date, day, time_tier, industry_item;;
+    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP());;
+
 
   }
   dimension_group: date {
