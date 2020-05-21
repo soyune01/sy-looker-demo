@@ -10,13 +10,13 @@ datagroup: sy_demo_cloudsql_default_datagroup {
 persist_with: sy_demo_cloudsql_default_datagroup
 
 explore: call_weather_report {
-  join: seoul_weather_2018 {
+  join: seoul_weather {
     type: inner
-    sql_on: ${call_weather_report.addr_sido} = ${seoul_weather_2018.sido}
-              AND ${call_weather_report.addr_sigungu} = ${seoul_weather_2018.gungu}
-              AND left(${call_weather_report.addr_dong}, 2) = ${seoul_weather_2018.dong}
-              AND ${call_weather_report.date} = ${seoul_weather_2018.date}
-              AND ${call_weather_report.time_tier} = ${seoul_weather_2018.hour};;
+    sql_on: ${call_weather_report.addr_sido} = ${seoul_weather.sido}
+              AND ${call_weather_report.addr_sigungu} = ${seoul_weather.gungu}
+              AND left(${call_weather_report.addr_dong}, 2) = ${seoul_weather.dong}
+              AND ${call_weather_report.date} = ${seoul_weather.date}
+              AND ${call_weather_report.time_tier} = ${seoul_weather.hour};;
     relationship: one_to_one
   }
 }

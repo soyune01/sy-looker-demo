@@ -54,7 +54,7 @@ view: seoul_population {
           FROM `stf-development.looker_demo.seoul_population`
           WHERE year = '2018'
           group by  year, substr(sido, 0, 2), gungu, substr(dongmyeon, 0, 2) ;;
-          sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP());;
+          #sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP());;
   }
 
   dimension: dongmyeon {
