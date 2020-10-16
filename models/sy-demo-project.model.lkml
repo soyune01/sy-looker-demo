@@ -46,32 +46,6 @@ explore: seoul_population {
   hidden: yes
 }
 
-explore: seoul_households {}
-
-# explore: customer {}
-
-# explore: order_hist {
-#   join: seoul_weather_2018 {
-#     type: left_outer
-#     sql_on: ${order_hist.product_id} = ${product.product_id} ;;
-#     relationship: many_to_one
-#   }
-
-#   join: customer {
-#     type: left_outer
-#     sql_on: ${order_hist.customer_id} = ${customer.customer_id} ;;
-#     relationship: many_to_one
-#   }
-# }
-
-# explore: product {}
-
-# explore: product_catalog {}
-
-# explore: seoul_households {}
-
-
-
-# explore: seoul_weather_2018 {}
-
-# explore: weather_seoul {}
+explore: seoul_households {
+  hidden: yes
+}
